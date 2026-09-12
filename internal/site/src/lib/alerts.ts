@@ -104,6 +104,30 @@ export const alertInfo: Record<string, AlertInfo> = {
 		start: 20,
 		invert: true,
 	},
+	UPSCharge: {
+		name: () => t`UPS battery charge`, unit: "%", icon: BatteryMediumIcon,
+		desc: () => t`Triggers when UPS battery charge drops below a threshold`, start: 20, invert: true,
+	},
+	UPSRuntime: {
+		name: () => t`UPS runtime`, unit: " min", icon: HourglassIcon,
+		desc: () => t`Triggers when estimated UPS runtime drops below a threshold`, start: 5, invert: true, max: 120,
+	},
+	UPSLoad: {
+		name: () => t`UPS load`, unit: "%", icon: BatteryMediumIcon,
+		desc: () => t`Triggers when UPS load exceeds a threshold`, start: 80, max: 150,
+	},
+	UPSOnBattery: {
+		name: () => t`UPS on battery`, unit: "", icon: BatteryMediumIcon,
+		desc: () => t`Triggers when any UPS switches to battery power`, noDuration: true,
+	},
+	UPSDisconnected: {
+		name: () => t`UPS communication`, unit: "", icon: ServerCrashIcon,
+		desc: () => t`Triggers when communication with any UPS is lost`, noDuration: true,
+	},
+	UPSFault: {
+		name: () => t`UPS fault`, unit: "", icon: BatteryMediumIcon,
+		desc: () => t`Triggers on UPS low battery, overload, replacement battery, or alarm status`, noDuration: true,
+	},
 	ContainerHealth: {
 		name: () => t`Container Health`,
 		unit: "",

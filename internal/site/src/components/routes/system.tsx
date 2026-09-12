@@ -11,6 +11,7 @@ import { RootDiskCharts, ExtraFsCharts } from "./system/charts/disk-charts"
 import { ZfsCharts } from "./system/charts/storage-pool-charts"
 import { BandwidthChart, ContainerNetworkChart } from "./system/charts/network-charts"
 import { TemperatureChart, FanChart, BatteryChart } from "./system/charts/sensor-charts"
+import { UPSCharts } from "./system/charts/ups-charts"
 import { GpuPowerChart, GpuCharts } from "./system/charts/gpu-charts"
 import { LazyContainersTable, LazySmartTable, LazySystemdTable, LazyZfsTable } from "./system/lazy-tables"
 import { LoadAverageChart } from "./system/charts/load-average-chart"
@@ -128,6 +129,7 @@ export default memo(function SystemDetail({ id }: { id: string }) {
 					<FanChart {...coreProps} />
 
 					<BatteryChart system={system} {...coreProps} />
+					<UPSCharts system={system} {...coreProps} />
 
 					{hasGpuPowerData && <GpuPowerChart chartData={chartData} grid={grid} dataEmpty={dataEmpty} />}
 				</div>
@@ -198,6 +200,7 @@ export default memo(function SystemDetail({ id }: { id: string }) {
 						<TemperatureChart {...coreProps} setPageBottomExtraMargin={setPageBottomExtraMargin} />
 						<FanChart {...coreProps} />
 						<BatteryChart system={system} {...coreProps} />
+						<UPSCharts system={system} {...coreProps} />
 						<SwapChart chartData={chartData} grid={grid} dataEmpty={dataEmpty} systemStats={systemStats} />
 						{pageBottomExtraMargin > 0 && <div style={{ marginBottom: pageBottomExtraMargin }}></div>}
 					</div>

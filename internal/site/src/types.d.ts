@@ -34,6 +34,7 @@ export interface SystemRecord extends RecordModel {
 }
 
 export interface SystemInfo {
+	ups?: Record<string, UPSStats>
 	/** hostname */
 	h: string
 	/** kernel **/
@@ -159,8 +160,22 @@ export interface SystemStats {
 	bat?: [number, BatteryState]
 	/** battery percentages by device name */
 	bats?: Record<string, number>
+	ups?: Record<string, UPSStats>
 	/** network interfaces [upload bytes, download bytes, total upload bytes, total download bytes] */
 	ni?: Record<string, [number, number, number, number]>
+}
+
+export interface UPSStats {
+	name: string
+	model?: string
+	status?: string
+	online: boolean
+	updated: number
+	metrics?: Record<string, number>
+	min?: Record<string, number>
+	max?: Record<string, number>
+	counts?: Record<string, number>
+	states?: string[]
 }
 
 export interface GPUData {

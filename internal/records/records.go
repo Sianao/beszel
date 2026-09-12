@@ -406,6 +406,7 @@ func AverageSystemStatsSlice(records []system.Stats) system.Stats {
 	}
 
 	// Compute averages
+	sum.UPS = averageUPS(records)
 	sum.Cpu = twoDecimals(sum.Cpu / count)
 	sum.Mem = twoDecimals(sum.Mem / count)
 	sum.MemUsed = twoDecimals(sum.MemUsed / count)

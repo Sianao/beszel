@@ -13,6 +13,7 @@ import (
 	"github.com/gliderlabs/ssh"
 	"github.com/henrygd/beszel"
 	"github.com/henrygd/beszel/agent/deltatracker"
+	"github.com/henrygd/beszel/agent/ups"
 	"github.com/henrygd/beszel/agent/utils"
 	"github.com/henrygd/beszel/internal/common"
 	"github.com/henrygd/beszel/internal/entities/system"
@@ -22,6 +23,7 @@ import (
 const defaultDataCacheTimeMs uint16 = 60_000
 
 type Agent struct {
+	upsManager                *ups.Manager
 	sync.Mutex                                                                      // Used to lock agent while collecting data
 	debug                     bool                                                  // true if LOG_LEVEL is set to debug
 	zfs                       bool                                                  // true if system has arcstats
@@ -73,6 +75,16 @@ func NewAgent(dataDir ...string) (agent *Agent, err error) {
 	}
 
 	agent.memCalc, _ = utils.GetEnv("MEM_CALC")
+	if host, ok := utils.GetEnv("NUT_HOST"); ok && host != "" {
+		names, _ := utils.GetEnv("NUT_UPS")
+		username, _ := utils.GetEnv("NUT_USERNAME")
+		password, _ := utils.GetEnv("NUT_PASSWORD")
+		if manager, err := ups.New(host, names, username, password); err == nil {
+			agent.upsManager = manager
+		} else {
+			slog.Warn("NUT configuration", "err", err)
+		}
+	}
 	agent.sensorConfig = agent.newSensorConfig()
 
 	// Parse disk usage cache duration (e.g., "15m", "1h") to avoid waking sleeping disks

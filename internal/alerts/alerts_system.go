@@ -62,6 +62,18 @@ func (am *AlertManager) HandleSystemAlerts(systemRecord *core.Record, data *syst
 		unit := "%"
 
 		switch name {
+		case "UPSCharge", "UPSRuntime", "UPSLoad", "UPSOnBattery", "UPSDisconnected", "UPSFault":
+			var ok bool
+			val, ok = upsAlertValue(name, data.Stats.UPS, alertData.Value)
+			if !ok {
+				continue
+			}
+			if name == "UPSRuntime" {
+				unit = " min"
+			}
+			if upsBinaryAlert(name) {
+				unit = ""
+			}
 		case "CPU":
 			val = data.Info.Cpu
 		case "Memory":
@@ -117,6 +129,9 @@ func (am *AlertManager) HandleSystemAlerts(systemRecord *core.Record, data *syst
 
 		triggered := alertData.Triggered
 		threshold := alertData.Value
+		if upsBinaryAlert(name) {
+			threshold = 0
+		}
 
 		// Battery alert has inverted logic: trigger when value is BELOW threshold
 		lowAlert := isLowAlert(name)
@@ -135,6 +150,9 @@ func (am *AlertManager) HandleSystemAlerts(systemRecord *core.Record, data *syst
 		}
 
 		min := max(1, alertData.Min)
+		if upsBinaryAlert(name) {
+			min = 1
+		}
 
 		alert := SystemAlertData{
 			systemRecord: systemRecord,
@@ -230,6 +248,12 @@ func (am *AlertManager) HandleSystemAlerts(systemRecord *core.Record, data *syst
 			}
 			// add to alert value
 			switch alert.name {
+			case "UPSCharge", "UPSRuntime", "UPSLoad":
+				value, ok := upsAlertValue(alert.name, stats.UPS, alert.threshold)
+				if !ok {
+					continue
+				}
+				alert.val += value
 			case "CPU":
 				alert.val += stats.Cpu
 			case "Memory":
@@ -429,6 +453,15 @@ func (am *AlertManager) sendSystemAlert(alert SystemAlertData) {
 		alert.descriptor = alert.name
 	}
 	body := fmt.Sprintf("%s averaged %.2f%s for the previous %v %s.", alert.descriptor, alert.val, alert.unit, alert.min, minutesLabel)
+	if upsBinaryAlert(alert.name) {
+		label := map[string]string{"UPSOnBattery": "UPS on battery", "UPSDisconnected": "UPS communication lost", "UPSFault": "UPS fault"}[alert.name]
+		state := "detected"
+		if !alert.triggered {
+			state = "resolved"
+		}
+		subject = fmt.Sprintf("%s: %s %s", systemName, label, state)
+		body = fmt.Sprintf("%s %s for the monitored UPS devices on %s.", label, state, systemName)
+	}
 
 	if err := am.setAlertTriggered(alert.alertData, alert.triggered); err != nil {
 		// app.Logger().Error("failed to save alert record", "err", err)
@@ -445,5 +478,5 @@ func (am *AlertManager) sendSystemAlert(alert SystemAlertData) {
 }
 
 func isLowAlert(name string) bool {
-	return name == "Battery"
+	return name == "Battery" || name == "UPSCharge" || name == "UPSRuntime"
 }

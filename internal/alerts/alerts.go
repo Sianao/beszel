@@ -3,6 +3,7 @@ package alerts
 
 import (
 	"fmt"
+	"github.com/henrygd/beszel/internal/entities/system"
 	"net/mail"
 	"net/url"
 	"sync"
@@ -47,6 +48,7 @@ type SystemAlertFsStats struct {
 
 // Values pulled from system_stats.stats that are relevant to alerts.
 type SystemAlertStats struct {
+	UPS          map[string]system.UPSStats    `json:"ups"`
 	Cpu          float64                       `json:"cpu"`
 	CpuBreakdown []float64                     `json:"cpub"`
 	Mem          float64                       `json:"mp"`

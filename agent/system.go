@@ -142,6 +142,10 @@ func (a *Agent) updateSystemDetails(updateFunc func(details *system.Details)) {
 // Returns current info, stats about the host system
 func (a *Agent) getSystemStats(cacheTimeMs uint16) system.Stats {
 	var systemStats system.Stats
+	if a.upsManager != nil {
+		systemStats.UPS = a.upsManager.Snapshot()
+	}
+	a.systemInfo.UPS = systemStats.UPS
 
 	// battery
 	if batteries, err := battery.GetBatteryStats(); err == nil {

@@ -11,6 +11,7 @@ import (
 )
 
 type Stats struct {
+	UPS            map[string]UPSStats `json:"ups,omitempty" cbor:"40,keyasint,omitempty"`
 	Cpu            float64             `json:"cpu" cbor:"0,keyasint"`
 	MaxCpu         float64             `json:"cpum,omitempty" cbor:"-"`
 	Mem            float64             `json:"m" cbor:"2,keyasint"`
@@ -156,9 +157,10 @@ const (
 
 // Core system data that is needed in All Systems table
 type Info struct {
-	Hostname      string `json:"h,omitempty" cbor:"0,keyasint,omitempty"` // deprecated - moved to Details struct
-	KernelVersion string `json:"k,omitempty" cbor:"1,keyasint,omitempty"` // deprecated - moved to Details struct
-	Cores         int    `json:"c,omitzero" cbor:"2,keyasint,omitzero"`   // deprecated - moved to Details struct
+	UPS           map[string]UPSStats `json:"ups,omitempty" cbor:"25,keyasint,omitempty"`
+	Hostname      string              `json:"h,omitempty" cbor:"0,keyasint,omitempty"` // deprecated - moved to Details struct
+	KernelVersion string              `json:"k,omitempty" cbor:"1,keyasint,omitempty"` // deprecated - moved to Details struct
+	Cores         int                 `json:"c,omitzero" cbor:"2,keyasint,omitzero"`   // deprecated - moved to Details struct
 	// Threads is needed in Info struct to calculate load average thresholds
 	Threads       int     `json:"t,omitempty" cbor:"3,keyasint,omitempty"`
 	CpuModel      string  `json:"m,omitempty" cbor:"4,keyasint,omitempty"` // deprecated - moved to Details struct

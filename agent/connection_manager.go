@@ -109,6 +109,9 @@ func (c *ConnectionManager) Start(serverOptions ServerOptions) error {
 	// signal handling for shutdown
 	sigCtx, stopSignals := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer stopSignals()
+	if c.agent.upsManager != nil {
+		go c.agent.upsManager.Run(sigCtx)
+	}
 
 	c.startWsTicker()
 	c.connect()

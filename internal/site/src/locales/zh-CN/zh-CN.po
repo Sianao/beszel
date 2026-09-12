@@ -266,6 +266,19 @@ msgstr "电池"
 msgid "Battery"
 msgstr "电池"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery voltage"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became active"
 msgstr "变为活动"
@@ -305,6 +318,10 @@ msgstr "比特 (Kbps, Mbps, Gbps)"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Boot state"
 msgstr "启动状态"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Bypass"
+msgstr ""
 
 #: src/components/routes/settings/general.tsx
 #: src/components/routes/settings/general.tsx
@@ -363,6 +380,7 @@ msgid "Charge"
 msgstr "充电"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Charging"
 msgstr "充电中"
@@ -654,6 +672,7 @@ msgid "Device"
 msgstr "设备"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Discharging"
 msgstr "放电中"
@@ -785,6 +804,11 @@ msgstr "暂时"
 msgid "Error"
 msgstr "错误"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Estimated runtime"
+msgstr ""
+
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Example:"
 msgstr "示例："
@@ -893,6 +917,10 @@ msgstr "固件"
 #: src/components/alerts/alerts-sheet.tsx
 msgid "For <0>{min}</0> {min, plural, one {minute} other {minutes}}"
 msgstr "持续<0>{min}</0> {min, plural, one {分钟} other {分钟}}"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Forced shutdown"
+msgstr ""
 
 #: src/components/login/auth-form.tsx
 msgid "Forgot password?"
@@ -1011,9 +1039,18 @@ msgctxt "Docker image"
 msgid "Image"
 msgstr "镜像"
 
+#: src/components/containers-table/containers-table-columns.tsx
+#: src/components/containers-table/containers-table-columns.tsx
+msgid "Image update available"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "Inactive"
 msgstr "非活跃"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Input voltage"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Interval"
@@ -1026,6 +1063,10 @@ msgstr "无效的电子邮件地址。"
 #: src/components/routes/settings/general.tsx
 msgid "Language"
 msgstr "语言"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Last successful reading"
+msgstr ""
 
 #: src/components/systems-table/systems-table.tsx
 msgid "Layout"
@@ -1097,6 +1138,10 @@ msgstr "日志"
 msgid "Looking instead for where to create alerts? Click the bell <0/> icons in the systems table."
 msgstr "在寻找创建警报的位置吗？点击系统表中的铃铛<0/>图标。"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Low battery"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Main PID"
 msgstr "主进程 ID"
@@ -1140,6 +1185,11 @@ msgstr "内存使用率"
 #: src/components/routes/system/charts/memory-charts.tsx
 msgid "Memory usage of containers"
 msgstr "容器内存使用量"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "min"
+msgstr ""
 
 #. Device model
 #: src/components/routes/system/smart-table.tsx
@@ -1230,6 +1280,10 @@ msgstr "通知可能包含近期的容器日志片段。"
 msgid "OAuth 2 / OIDC support"
 msgstr "支持 OAuth 2/OIDC"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "On battery"
+msgstr ""
+
 #: src/components/routes/settings/config-yaml.tsx
 msgid "On each restart, systems in the database will be updated to match the systems defined in the file."
 msgstr "每次重启时，数据库中的系统将更新以匹配文件中定义的系统。"
@@ -1267,6 +1321,18 @@ msgstr "或使用以下方式登录"
 #: src/components/routes/system/cpu-sheet.tsx
 msgid "Other"
 msgstr "其他"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output off"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Overload"
+msgstr ""
 
 #: src/components/alerts/alerts-sheet.tsx
 msgid "Overwrite existing alerts"
@@ -1400,6 +1466,11 @@ msgctxt "Container ports"
 msgid "Ports"
 msgstr "端口"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Power"
+msgstr ""
+
 #. Power On Time
 #: src/components/routes/system/smart-table.tsx
 msgid "Power On"
@@ -1476,6 +1547,10 @@ msgstr "刷新"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Relationships"
 msgstr "关系"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Replace battery"
+msgstr ""
 
 #: src/components/login/login.tsx
 msgid "Request a one-time password"
@@ -1586,6 +1661,10 @@ msgstr "查看<0>通知设置</0>以配置您接收警报的方式。"
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "Select {foo}"
 msgstr "选择 {foo}"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Select UPS"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Send a single heartbeat ping to verify your endpoint is working."
@@ -1850,6 +1929,10 @@ msgid "Triggers"
 msgstr "触发器"
 
 #: src/lib/alerts.ts
+msgid "Triggers on UPS low battery, overload, replacement battery, or alarm status"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when 1 minute load average exceeds a threshold"
 msgstr "当 1 分钟负载平均值超过阈值时触发"
 
@@ -1874,12 +1957,20 @@ msgid "Triggers when any systemd service enters the failed state"
 msgstr "当任意 systemd 服务进入失败状态时触发"
 
 #: src/lib/alerts.ts
+msgid "Triggers when any UPS switches to battery power"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when battery charge drops below a threshold"
 msgstr "当电池电量降至阈值以下时触发"
 
 #: src/lib/alerts.ts
 msgid "Triggers when combined up/down exceeds a threshold"
 msgstr "当网络的上/下行速度超过阈值时触发"
+
+#: src/lib/alerts.ts
+msgid "Triggers when communication with any UPS is lost"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when CPU I/O wait exceeds a threshold"
@@ -1894,6 +1985,10 @@ msgid "Triggers when CPU usage exceeds a threshold"
 msgstr "当 CPU 使用率超过阈值时触发"
 
 #: src/lib/alerts.ts
+msgid "Triggers when estimated UPS runtime drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when GPU usage exceeds a threshold"
 msgstr "当 GPU 使用率超过阈值时触发"
 
@@ -1904,6 +1999,14 @@ msgstr "当内存使用率超过阈值时触发"
 #: src/lib/alerts.ts
 msgid "Triggers when status switches between up and down"
 msgstr "当状态在上线与掉线之间切换时触发"
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS battery charge drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS load exceeds a threshold"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when usage of any disk exceeds a threshold"
@@ -1935,6 +2038,7 @@ msgid "Universal token"
 msgstr "通用令牌"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/storage-pools-table.tsx
 #: src/lib/i18n.ts
 msgid "Unknown"
@@ -1974,6 +2078,58 @@ msgstr "每 10 分钟更新一次。"
 msgid "Upload"
 msgstr "上传"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS alarm"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS charge and load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS communication"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS fault"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS on battery"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS power"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS runtime"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS unavailable or data stale"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS voltage"
+msgstr ""
+
 #: src/components/routes/system/info-bar.tsx
 #: src/components/systems-table/systems-table-columns.tsx
 msgid "Uptime"
@@ -2005,6 +2161,10 @@ msgstr "已用"
 #: src/components/navbar.tsx
 msgid "Users"
 msgstr "用户"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Utility power"
+msgstr ""
 
 #: src/components/routes/system/charts/disk-charts.tsx
 msgctxt "Disk I/O utilization"

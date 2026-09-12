@@ -52,6 +52,7 @@ The [quick start guide](https://beszel.dev/guide/getting-started) and other docu
 - **Fan speed** - Host system sensors (Linux, via `/sys/class/hwmon`).
 - **GPU usage / power draw** - Nvidia, AMD, and Intel.
 - **Battery** - Host system battery charge.
+- **UPS (NUT)** - Power status, charge, runtime, load, power, voltage, temperature, and alerts. See [UPS setup](supplemental/guides/ups.md).
 - **Containers** - Status and metrics of all running Docker / Podman containers.
 - **S.M.A.R.T.** - Host system disk health (includes eMMC wear/EOL and Linux mdraid array health via sysfs when available).
 - **ZFS** - Pool capacity, usage, health, I/O throughput, scrub status, and per-dataset usage.
