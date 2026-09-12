@@ -102,8 +102,8 @@ alert routing and sub-minute outage event capture are not part of this version.
 
 Protocol reference: [NUT network protocol](https://networkupstools.org/docs/developer-guide.chunked/net-protocol.html).
 
-The live card shows reported measurements only. Voltage history separates the
-battery from input/output voltage, and output frequency has its own chart.
+The live card shows reported measurements only. Voltage history combines input, output, and battery voltage in one chart with
+a legend; output frequency has its own chart.
 Charts appear as soon as a live metric is available and wait for historical
 records instead of synthesizing history from the current reading.
 

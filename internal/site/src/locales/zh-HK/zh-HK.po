@@ -283,7 +283,6 @@ msgid "Battery temperature"
 msgstr "電池溫度"
 
 #: src/components/routes/system/charts/ups-charts.tsx
-#: src/components/routes/system/charts/ups-charts.tsx
 msgid "Battery voltage"
 msgstr "電池電壓"
 
@@ -2198,7 +2197,7 @@ msgstr "UPS 無法連線或資料已過期"
 
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "UPS voltage"
-msgstr "UPS 輸入／輸出電壓"
+msgstr "UPS 電壓"
 
 #: src/components/routes/system/info-bar.tsx
 #: src/components/systems-table/systems-table-columns.tsx

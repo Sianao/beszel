@@ -46,20 +46,14 @@ export function UPSCharts({ chartData, grid, dataEmpty, maxValues, system }: {
 	const fresh = system.status === "up" && current?.online && Date.now() / 1000 - current.updated < 120
 	const flags = fresh ? current.status?.split(/\s+/).filter(Boolean) ?? [] : []
 	const warning = !fresh || flags.some((flag) => ["OB", "LB", "RB", "OVER", "FSD", "ALARM", "OFF"].includes(flag))
-	const metrics = fresh ? current?.metrics : undefined
 	const groups = [
 		{ title: t`UPS charge and load`, unit: "%", keys: ["battery.charge", "ups.load"], labels: [t`Battery charge`, t`UPS load`], scale: 1 },
 		{ title: t`UPS runtime`, unit: t`min`, keys: ["battery.runtime"], labels: [t`Estimated runtime`], scale: 60 },
 		{ title: t`UPS power`, unit: "W", keys: ["ups.realpower"], labels: [t`Power`], scale: 1 },
-		{ title: t`UPS voltage`, unit: "V", keys: ["input.voltage", "output.voltage"], labels: [t`Input voltage`, t`Output voltage`], scale: 1 },
-		{ title: t`Battery voltage`, unit: "V", keys: ["battery.voltage"], labels: [t`Battery voltage`], scale: 1 },
+		{ title: t`UPS voltage`, unit: "V", keys: ["input.voltage", "output.voltage", "battery.voltage"], labels: [t`Input voltage`, t`Output voltage`, t`Battery voltage`], scale: 1 },
 		{ title: t`Output frequency`, unit: "Hz", keys: ["output.frequency"], labels: [t`Output frequency`], scale: 1 },
 		{ title: t`UPS temperature`, unit: "°C", keys: ["ups.temperature", "battery.temperature"], labels: [t`UPS temperature`, t`Battery temperature`], scale: 1 },
 	]
-	const reading = (key: string, unit: string, scale = 1) => {
-		const value = metrics?.[key]
-		return value === undefined ? "—" : `${decimalString(value / scale, 1)} ${unit}`
-	}
 	const detailValue = (key: string, value: string) => {
 		if (key === "ups.beeper.status") {
 			switch (value) {
@@ -83,13 +77,13 @@ export function UPSCharts({ chartData, grid, dataEmpty, maxValues, system }: {
 			<Card className="col-span-full">
 				<CardHeader>
 					<div className="flex flex-wrap items-center justify-between gap-3">
-						<CardTitle>UPS · {id}</CardTitle>
+						<CardTitle>{id.toLowerCase() === "ups" ? "UPS" : `UPS · ${id}`}</CardTitle>
 						{names.length > 1 && <Select value={id} onValueChange={setSelected}>
 							<SelectTrigger className="w-48" aria-label={t`Select UPS`}><SelectValue /></SelectTrigger>
 							<SelectContent>{names.map((name) => <SelectItem key={name} value={name}>{name}</SelectItem>)}</SelectContent>
 						</Select>}
 					</div>
-					<CardDescription>{current?.model || id}</CardDescription>
+					{current?.model && current.model !== id && <CardDescription>{current.model}</CardDescription>}
 					<p className={cn("text-sm font-medium", warning ? "text-destructive" : "text-emerald-600 dark:text-emerald-400")}>
 						{t`Status`}: {fresh ? flags.map((flag) => {
 							const label = statusLabel(flag)
@@ -99,13 +93,6 @@ export function UPSCharts({ chartData, grid, dataEmpty, maxValues, system }: {
 					<CardDescription>{t`Last successful reading`}: {current?.updated ? new Date(current.updated * 1000).toLocaleString() : "—"}</CardDescription>
 				</CardHeader>
 				<CardContent>
-					<dl className="grid grid-cols-2 gap-4 sm:grid-cols-4 tabular-nums">
-						{groups.flatMap((group) => group.keys
-							.filter((key) => current?.metrics?.[key] !== undefined || chartData.systemStats.some((record) => record.stats?.ups?.[id]?.metrics?.[key] !== undefined))
-							.map((key) => [group.labels[group.keys.indexOf(key)], reading(key, group.unit, group.scale)])).map(([label, value]) => (
-							<div key={label}><dt className="text-sm text-muted-foreground">{label}</dt><dd className="mt-1 text-xl font-semibold">{value}</dd></div>
-						))}
-					</dl>
 					{current?.details && <dl className="mt-6 grid grid-cols-2 gap-4 border-t pt-4 sm:grid-cols-4">
 						{[
 							["ups.type", t`UPS type`, ""],

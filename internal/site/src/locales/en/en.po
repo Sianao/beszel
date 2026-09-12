@@ -278,7 +278,6 @@ msgid "Battery temperature"
 msgstr "Battery temperature"
 
 #: src/components/routes/system/charts/ups-charts.tsx
-#: src/components/routes/system/charts/ups-charts.tsx
 msgid "Battery voltage"
 msgstr "Battery voltage"
 
