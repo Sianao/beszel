@@ -298,7 +298,8 @@ export function SystemsTableColumns(viewMode: "table" | "grid"): ColumnDef<Syste
 			hideSort: true,
 			cell(info) {
 				const [pct, state] = info.row.original.info.bat ?? []
-				if (pct === undefined) {
+				// Agents without a readable battery serialize the zero-value [0, Unknown].
+				if (pct === undefined || (pct === 0 && state === BatteryState.Unknown)) {
 					return null
 				}
 

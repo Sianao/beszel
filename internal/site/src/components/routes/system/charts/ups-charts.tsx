@@ -51,24 +51,6 @@ export function UPSCharts({ chartData, grid, dataEmpty, maxValues, system }: {
 		{ title: t`Output frequency`, unit: "Hz", keys: ["output.frequency"], labels: [t`Output frequency`], scale: 1 },
 		{ title: t`UPS temperature`, unit: "°C", keys: ["ups.temperature", "battery.temperature"], labels: [t`UPS temperature`, t`Battery temperature`], scale: 1 },
 	]
-	const detailValue = (key: string, value: string) => {
-		if (key === "ups.beeper.status") {
-			switch (value) {
-				case "enabled": return t`Enabled`
-				case "disabled": return t`Disabled`
-				case "muted": return t`Muted`
-			}
-		}
-		if (key === "ups.type") {
-			switch (value) {
-				case "offline / line interactive": return t`Offline / line interactive`
-				case "offline": return t`Offline UPS`
-				case "line interactive": return t`Line interactive UPS`
-				case "online": return t`Online UPS`
-			}
-		}
-		return value
-	}
 	return (
 		<Fragment>
 			<Card className="col-span-full">
@@ -90,22 +72,6 @@ export function UPSCharts({ chartData, grid, dataEmpty, maxValues, system }: {
 					<CardDescription>{t`Last successful reading`}: {current?.updated ? new Date(current.updated * 1000).toLocaleString() : "—"}</CardDescription>
 				</CardHeader>
 				<CardContent>
-					{current?.details && <dl className="mt-6 grid grid-cols-2 gap-4 border-t pt-4 sm:grid-cols-4">
-						{[
-							["ups.type", t`UPS type`, ""],
-							["ups.beeper.status", t`Beeper status`, ""],
-							["battery.voltage.nominal", t`Nominal battery voltage`, "V"],
-							["battery.voltage.high", t`Battery high voltage reference`, "V"],
-							["battery.voltage.low", t`Battery low voltage reference`, "V"],
-							["output.voltage.nominal", t`Nominal output voltage`, "V"],
-							["output.current.nominal", t`Nominal output current`, "A"],
-							["output.frequency.nominal", t`Nominal output frequency`, "Hz"],
-							["ups.delay.shutdown", t`Shutdown delay`, "s"],
-							["ups.delay.start", t`Startup delay`, "s"],
-						].filter(([key]) => current.details?.[key] !== undefined).map(([key, label, unit]) => (
-							<div key={key}><dt className="text-sm text-muted-foreground">{label}</dt><dd className="mt-1 break-words">{fresh ? `${detailValue(key, current.details?.[key] ?? "")} ${unit}` : "—"}</dd></div>
-						))}
-					</dl>}
 				</CardContent>
 			</Card>
 			{groups.map((group) => {
