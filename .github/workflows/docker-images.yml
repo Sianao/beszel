@@ -13,8 +13,8 @@ jobs:
       max-parallel: 5
       matrix:
         include:
-          # henrygd/beszel
-          - image: henrygd/beszel
+          # Docker Hub image follows the current repository owner.
+          - image: ${{ github.repository_owner }}/beszel
             dockerfile: ./internal/dockerfile_hub
             registry: docker.io
             username_secret: DOCKERHUB_USERNAME
@@ -26,8 +26,8 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
             
-          # henrygd/beszel-agent:alpine
-          - image: henrygd/beszel-agent
+          # Docker Hub image follows the current repository owner.
+          - image: ${{ github.repository_owner }}/beszel-agent
             dockerfile: ./internal/dockerfile_agent_alpine
             registry: docker.io
             username_secret: DOCKERHUB_USERNAME
@@ -38,8 +38,8 @@ jobs:
               type=semver,pattern={{major}}.{{minor}}-alpine
               type=semver,pattern={{major}}-alpine
 
-          # henrygd/beszel-agent-nvidia
-          - image: henrygd/beszel-agent-nvidia
+          # Docker Hub image follows the current repository owner.
+          - image: ${{ github.repository_owner }}/beszel-agent-nvidia
             dockerfile: ./internal/dockerfile_agent_nvidia
             platforms: linux/amd64,linux/arm64
             registry: docker.io
@@ -52,8 +52,8 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
 
-          # henrygd/beszel-agent-nvidia:slim
-          - image: henrygd/beszel-agent-nvidia
+          # Docker Hub image follows the current repository owner.
+          - image: ${{ github.repository_owner }}/beszel-agent-nvidia
             dockerfile: ./internal/dockerfile_agent_nvidia_slim
             platforms: linux/amd64,linux/arm64
             registry: docker.io
@@ -65,8 +65,8 @@ jobs:
               type=semver,pattern={{major}}.{{minor}}-slim
               type=semver,pattern={{major}}-slim
 
-          # henrygd/beszel-agent-intel
-          - image: henrygd/beszel-agent-intel
+          # Docker Hub image follows the current repository owner.
+          - image: ${{ github.repository_owner }}/beszel-agent-intel
             dockerfile: ./internal/dockerfile_agent_intel
             platforms: linux/amd64
             registry: docker.io
@@ -79,7 +79,7 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
 
-          # ghcr.io/henrygd/beszel
+          # GHCR image follows the current repository path.
           - image: ghcr.io/${{ github.repository }}/beszel
             dockerfile: ./internal/dockerfile_hub
             registry: ghcr.io
@@ -92,7 +92,7 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
 
-          # ghcr.io/henrygd/beszel-agent
+          # GHCR image follows the current repository path.
           - image: ghcr.io/${{ github.repository }}/beszel-agent
             dockerfile: ./internal/dockerfile_agent
             registry: ghcr.io
@@ -106,7 +106,7 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
 
-          # ghcr.io/henrygd/beszel-agent-nvidia
+          # GHCR image follows the current repository path.
           - image: ghcr.io/${{ github.repository }}/beszel-agent-nvidia
             dockerfile: ./internal/dockerfile_agent_nvidia
             platforms: linux/amd64,linux/arm64
@@ -120,7 +120,7 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
 
-          # ghcr.io/henrygd/beszel-agent-nvidia:slim
+          # GHCR image follows the current repository path.
           - image: ghcr.io/${{ github.repository }}/beszel-agent-nvidia
             dockerfile: ./internal/dockerfile_agent_nvidia_slim
             platforms: linux/amd64,linux/arm64
@@ -133,7 +133,7 @@ jobs:
               type=semver,pattern={{major}}.{{minor}}-slim
               type=semver,pattern={{major}}-slim
 
-          # ghcr.io/henrygd/beszel-agent-intel
+          # GHCR image follows the current repository path.
           - image: ghcr.io/${{ github.repository }}/beszel-agent-intel
             dockerfile: ./internal/dockerfile_agent_intel
             platforms: linux/amd64
@@ -147,7 +147,7 @@ jobs:
               type=semver,pattern={{major}}
               type=raw,value={{sha}},enable=${{ github.ref_type != 'tag' }}
 
-          # ghcr.io/henrygd/beszel-agent:alpine
+          # GHCR image follows the current repository path.
           - image: ghcr.io/${{ github.repository }}/beszel-agent
             dockerfile: ./internal/dockerfile_agent_alpine
             registry: ghcr.io
@@ -159,8 +159,8 @@ jobs:
               type=semver,pattern={{major}}.{{minor}}-alpine
               type=semver,pattern={{major}}-alpine
 
-          # henrygd/beszel-agent (keep at bottom so it gets built after :alpine and gets the latest tag)
-          - image: henrygd/beszel-agent
+          # Keep at bottom so it gets built after :alpine and gets the latest tag.
+          - image: ${{ github.repository_owner }}/beszel-agent
             dockerfile: ./internal/dockerfile_agent
             registry: docker.io
             username_secret: DOCKERHUB_USERNAME
