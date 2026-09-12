@@ -70,7 +70,16 @@ RUN set -eux; \
 # --------------------------
 FROM --platform=$TARGETPLATFORM debian:bookworm-slim AS zfsutils-builder
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# zfsutils-linux is in Debian's contrib component, which is not enabled by
+# default in the slim image. Keep the builder isolated so the final distroless
+# image only receives zfs/zpool and their runtime libraries.
+RUN set -eux; \
+  if [ -f /etc/apt/sources.list.d/debian.sources ]; then \
+    sed -i 's/^Components: main$/Components: main contrib non-free non-free-firmware/' /etc/apt/sources.list.d/debian.sources; \
+  else \
+    sed -i 's/ main$/ main contrib non-free non-free-firmware/' /etc/apt/sources.list; \
+  fi; \
+  apt-get update && apt-get install -y --no-install-recommends \
   zfsutils-linux \
   && rm -rf /var/lib/apt/lists/*
 
