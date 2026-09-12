@@ -35,9 +35,6 @@ export function UPSCharts({ chartData, grid, dataEmpty, maxValues, system }: {
 	const { t } = useLingui()
 	const [selected, setSelected] = useState("")
 	const ids = new Set(Object.keys(system.info.ups ?? {}))
-	for (const record of chartData.systemStats) {
-		for (const id of Object.keys(record.stats?.ups ?? {})) ids.add(id)
-	}
 	const names = [...ids].sort()
 	const id = ids.has(selected) ? selected : names[0]
 	if (!id) return null

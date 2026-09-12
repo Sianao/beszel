@@ -32,7 +32,9 @@ export function BatteryChart({
 		return [...names].sort()
 	}, [chartData.systemStats])
 	const hasNamedBatteries = batteryNames.length > 0
-	const showBatteryChart = hasNamedBatteries || chartData.systemStats.some((record) => record.stats?.bat)
+	// Historical battery samples alone should not make the chart appear for a
+	// client that no longer reports a battery.
+	const showBatteryChart = system.info.bat !== undefined
 
 	if (!showBatteryChart) {
 		return null
