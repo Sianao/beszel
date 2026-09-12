@@ -26,6 +26,12 @@ jobs:
       - name: Build site
         run: bun run --cwd ./internal/site build
 
+      # Lingui's extract step refreshes translation catalogs as part of the
+      # build. They are source-controlled artifacts and must remain unchanged
+      # during a release so GoReleaser's dirty-worktree check can pass.
+      - name: Restore generated locale changes
+        run: git restore --worktree -- internal/site/src/locales
+
       - name: Set up Go
         uses: actions/setup-go@v7
         with:
