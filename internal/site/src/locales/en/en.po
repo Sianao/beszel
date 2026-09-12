@@ -262,14 +262,22 @@ msgid "Battery"
 msgstr "Battery"
 
 #: src/components/routes/system/charts/ups-charts.tsx
-#: src/components/routes/system/charts/ups-charts.tsx
 msgid "Battery charge"
 msgstr "Battery charge"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery high voltage reference"
+msgstr "Battery high voltage reference"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery low voltage reference"
+msgstr "Battery low voltage reference"
 
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "Battery temperature"
 msgstr "Battery temperature"
 
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "Battery voltage"
 msgstr "Battery voltage"
@@ -281,6 +289,10 @@ msgstr "Became active"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became inactive"
 msgstr "Became inactive"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Beeper status"
+msgstr "Beeper status"
 
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Before"
@@ -666,6 +678,10 @@ msgstr "Detail"
 msgid "Device"
 msgstr "Device"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Disabled"
+msgstr "Disabled"
+
 #. Context: Battery state
 #: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
@@ -757,6 +773,10 @@ msgstr "Email notifications"
 msgid "Empty"
 msgstr "Empty"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Enabled"
+msgstr "Enabled"
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "End Time"
@@ -799,7 +819,6 @@ msgstr "Ephemeral"
 msgid "Error"
 msgstr "Error"
 
-#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "Estimated runtime"
 msgstr "Estimated runtime"
@@ -1080,6 +1099,10 @@ msgstr "Lifecycle"
 msgid "limit"
 msgstr "limit"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Line interactive UPS"
+msgstr "Line interactive UPS"
+
 #: src/components/routes/system/charts/load-average-chart.tsx
 msgid "Load Average"
 msgstr "Load Average"
@@ -1182,7 +1205,6 @@ msgid "Memory usage of containers"
 msgstr "Memory usage of containers"
 
 #: src/components/routes/system/charts/ups-charts.tsx
-#: src/components/routes/system/charts/ups-charts.tsx
 msgid "min"
 msgstr "min"
 
@@ -1194,6 +1216,10 @@ msgstr "Model"
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "Mountpoint"
 msgstr "Mountpoint"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Muted"
+msgstr "Muted"
 
 #: src/components/add-system.tsx
 #: src/components/alerts-history-columns.tsx
@@ -1257,6 +1283,22 @@ msgstr "No S.M.A.R.T. attributes available for this device."
 msgid "No systems found."
 msgstr "No systems found."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal battery voltage"
+msgstr "Nominal battery voltage"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output current"
+msgstr "Nominal output current"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output frequency"
+msgstr "Nominal output frequency"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output voltage"
+msgstr "Nominal output voltage"
+
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "None"
 msgstr "None"
@@ -1274,6 +1316,14 @@ msgstr "Notifications may include recent container log excerpts."
 #: src/components/login/auth-form.tsx
 msgid "OAuth 2 / OIDC support"
 msgstr "OAuth 2 / OIDC support"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline / line interactive"
+msgstr "Offline / line interactive"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline UPS"
+msgstr "Offline UPS"
 
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "On battery"
@@ -1300,6 +1350,10 @@ msgstr "One-time"
 msgid "One-time password"
 msgstr "One-time password"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Online UPS"
+msgstr "Online UPS"
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
@@ -1316,6 +1370,11 @@ msgstr "Or continue with"
 #: src/components/routes/system/cpu-sheet.tsx
 msgid "Other"
 msgstr "Other"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output frequency"
+msgstr "Output frequency"
 
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "Output off"
@@ -1461,7 +1520,6 @@ msgctxt "Container ports"
 msgid "Ports"
 msgstr "Ports"
 
-#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "Power"
 msgstr "Power"
@@ -1712,6 +1770,10 @@ msgstr "Settings"
 msgid "Settings saved"
 msgstr "Settings saved"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Shutdown delay"
+msgstr "Shutdown delay"
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "Sign in"
@@ -1729,6 +1791,10 @@ msgstr "Sort By"
 msgid "Start Time"
 msgstr "Start Time"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Startup delay"
+msgstr "Startup delay"
+
 #. Context: alert state (active or resolved)
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/quiet-hours.tsx
@@ -1738,6 +1804,7 @@ msgid "State"
 msgstr "State"
 
 #: src/components/containers-table/containers-table-columns.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/smart-table.tsx
 #: src/components/systemd-table/systemd-table.tsx
 #: src/components/systems-table/systems-table.tsx
@@ -2094,7 +2161,6 @@ msgid "UPS fault"
 msgstr "UPS fault"
 
 #: src/components/routes/system/charts/ups-charts.tsx
-#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/alerts.ts
 msgid "UPS load"
 msgstr "UPS load"
@@ -2116,6 +2182,10 @@ msgstr "UPS runtime"
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "UPS temperature"
 msgstr "UPS temperature"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS type"
+msgstr "UPS type"
 
 #: src/components/routes/system/charts/ups-charts.tsx
 msgid "UPS unavailable or data stale"

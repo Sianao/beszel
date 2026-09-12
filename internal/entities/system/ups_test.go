@@ -9,7 +9,7 @@ import (
 )
 
 func TestUPSWireRoundTrip(t *testing.T) {
-	device := UPSStats{Name: "ups", Online: true, Status: "OB LB", Updated: 100, Metrics: map[string]float64{"battery.charge": 0}}
+	device := UPSStats{Name: "ups", Online: true, Status: "OB LB", Updated: 100, Details: map[string]string{"ups.type": "offline / line interactive"}, Metrics: map[string]float64{"battery.charge": 0}}
 	want := CombinedData{Stats: Stats{UPS: map[string]UPSStats{"ups": device}}, Info: Info{UPS: map[string]UPSStats{"ups": device}}}
 	for _, codec := range []struct {
 		name      string

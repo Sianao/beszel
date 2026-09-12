@@ -266,6 +266,27 @@ msgstr "Baterija"
 msgid "Battery"
 msgstr "Baterija"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery high voltage reference"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery low voltage reference"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery voltage"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became active"
 msgstr "Postalo aktivno"
@@ -273,6 +294,10 @@ msgstr "Postalo aktivno"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became inactive"
 msgstr "Postalo neaktivno"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Beeper status"
+msgstr ""
 
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Before"
@@ -305,6 +330,10 @@ msgstr "Biti (Kbps, Mbps, Gbps)"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Boot state"
 msgstr "Stanje zagona"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Bypass"
+msgstr ""
 
 #: src/components/routes/settings/general.tsx
 #: src/components/routes/settings/general.tsx
@@ -363,6 +392,7 @@ msgid "Charge"
 msgstr "Naboj"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Charging"
 msgstr "Polni se"
@@ -653,7 +683,12 @@ msgstr "Podrobnost"
 msgid "Device"
 msgstr "Naprava"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Disabled"
+msgstr ""
+
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Discharging"
 msgstr "Prazni se"
@@ -743,6 +778,10 @@ msgstr "E-poštna obvestila"
 msgid "Empty"
 msgstr "Prazna"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Enabled"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "End Time"
@@ -784,6 +823,10 @@ msgstr "Prehodni"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Error"
 msgstr "Napaka"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Estimated runtime"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Example:"
@@ -893,6 +936,10 @@ msgstr "Vdelana programska oprema"
 #: src/components/alerts/alerts-sheet.tsx
 msgid "For <0>{min}</0> {min, plural, one {minute} other {minutes}}"
 msgstr "Za <0>{min}</0> {min, plural, one {minuto} other {minut}}"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Forced shutdown"
+msgstr ""
 
 #: src/components/login/auth-form.tsx
 msgid "Forgot password?"
@@ -1011,9 +1058,18 @@ msgctxt "Docker image"
 msgid "Image"
 msgstr "Slika"
 
+#: src/components/containers-table/containers-table-columns.tsx
+#: src/components/containers-table/containers-table-columns.tsx
+msgid "Image update available"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "Inactive"
 msgstr "Neaktivno"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Input voltage"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Interval"
@@ -1026,6 +1082,10 @@ msgstr "Napačen e-poštni naslov."
 #: src/components/routes/settings/general.tsx
 msgid "Language"
 msgstr "Jezik"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Last successful reading"
+msgstr ""
 
 #: src/components/systems-table/systems-table.tsx
 msgid "Layout"
@@ -1043,6 +1103,10 @@ msgstr "Življenjski cikel"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "limit"
 msgstr "omejitev"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Line interactive UPS"
+msgstr ""
 
 #: src/components/routes/system/charts/load-average-chart.tsx
 msgid "Load Average"
@@ -1097,6 +1161,10 @@ msgstr "Dnevniki"
 msgid "Looking instead for where to create alerts? Click the bell <0/> icons in the systems table."
 msgstr "Namesto tega iščete, kje ustvariti opozorila? Kliknite ikone zvonca <0/> v sistemski tabeli."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Low battery"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Main PID"
 msgstr "Glavni PID"
@@ -1141,6 +1209,10 @@ msgstr "Poraba pomnilnika"
 msgid "Memory usage of containers"
 msgstr "Poraba pomnilnika vsebnikov"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "min"
+msgstr ""
+
 #. Device model
 #: src/components/routes/system/smart-table.tsx
 msgid "Model"
@@ -1149,6 +1221,10 @@ msgstr ""
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "Mountpoint"
 msgstr "Točka priklopa"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Muted"
+msgstr ""
 
 #: src/components/add-system.tsx
 #: src/components/alerts-history-columns.tsx
@@ -1212,6 +1288,22 @@ msgstr "Za to napravo ni na voljo atributov S.M.A.R.T."
 msgid "No systems found."
 msgstr "Ne najdem sistema."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal battery voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output current"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output frequency"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output voltage"
+msgstr ""
+
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "None"
 msgstr "Brez"
@@ -1229,6 +1321,18 @@ msgstr "Obvestila lahko vključujejo nedavne izseke dnevnikov vsebnikov."
 #: src/components/login/auth-form.tsx
 msgid "OAuth 2 / OIDC support"
 msgstr "Podpora za OAuth 2 / OIDC"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline / line interactive"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline UPS"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "On battery"
+msgstr ""
 
 #: src/components/routes/settings/config-yaml.tsx
 msgid "On each restart, systems in the database will be updated to match the systems defined in the file."
@@ -1251,6 +1355,10 @@ msgstr "Enkratno"
 msgid "One-time password"
 msgstr "Enkratno geslo"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Online UPS"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
@@ -1267,6 +1375,23 @@ msgstr "Ali nadaljuj z"
 #: src/components/routes/system/cpu-sheet.tsx
 msgid "Other"
 msgstr "Drugo"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output frequency"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output off"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Overload"
+msgstr ""
 
 #: src/components/alerts/alerts-sheet.tsx
 msgid "Overwrite existing alerts"
@@ -1400,6 +1525,10 @@ msgctxt "Container ports"
 msgid "Ports"
 msgstr "Vrata"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Power"
+msgstr ""
+
 #. Power On Time
 #: src/components/routes/system/smart-table.tsx
 msgid "Power On"
@@ -1476,6 +1605,10 @@ msgstr "Osveži"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Relationships"
 msgstr "Razmerja"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Replace battery"
+msgstr ""
 
 #: src/components/login/login.tsx
 msgid "Request a one-time password"
@@ -1587,6 +1720,10 @@ msgstr "Glejte <0>nastavitve obvestil</0>, da nastavite način prejemanja opozor
 msgid "Select {foo}"
 msgstr "Izberi {foo}"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Select UPS"
+msgstr ""
+
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Send a single heartbeat ping to verify your endpoint is working."
 msgstr "Pošljite en srčni utrip (ping), da preverite, ali vaša končna točka deluje."
@@ -1638,6 +1775,10 @@ msgstr "Nastavitve"
 msgid "Settings saved"
 msgstr "Nastavitve so shranjene"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Shutdown delay"
+msgstr ""
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "Prijavite se"
@@ -1655,6 +1796,10 @@ msgstr "Razvrsti po"
 msgid "Start Time"
 msgstr "Čas začetka"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Startup delay"
+msgstr ""
+
 #. Context: alert state (active or resolved)
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/quiet-hours.tsx
@@ -1664,6 +1809,7 @@ msgid "State"
 msgstr "Stanje"
 
 #: src/components/containers-table/containers-table-columns.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/smart-table.tsx
 #: src/components/systemd-table/systemd-table.tsx
 #: src/components/systems-table/systems-table.tsx
@@ -1850,6 +1996,10 @@ msgid "Triggers"
 msgstr "Sprožilci"
 
 #: src/lib/alerts.ts
+msgid "Triggers on UPS low battery, overload, replacement battery, or alarm status"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when 1 minute load average exceeds a threshold"
 msgstr "Sproži se, ko 1-minutna povprečna obremenitev preseže prag"
 
@@ -1874,12 +2024,20 @@ msgid "Triggers when any systemd service enters the failed state"
 msgstr "Sproži se, ko katera koli storitev systemd preide v stanje napake"
 
 #: src/lib/alerts.ts
+msgid "Triggers when any UPS switches to battery power"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when battery charge drops below a threshold"
 msgstr "Sproži se, ko napolnjenost baterije pade pod prag"
 
 #: src/lib/alerts.ts
 msgid "Triggers when combined up/down exceeds a threshold"
 msgstr "Sproži, ko kombinacija gor/dol preseže prag"
+
+#: src/lib/alerts.ts
+msgid "Triggers when communication with any UPS is lost"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when CPU I/O wait exceeds a threshold"
@@ -1894,6 +2052,10 @@ msgid "Triggers when CPU usage exceeds a threshold"
 msgstr "Sproži se, ko poraba procesorja preseže prag"
 
 #: src/lib/alerts.ts
+msgid "Triggers when estimated UPS runtime drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when GPU usage exceeds a threshold"
 msgstr "Sproži se, ko poraba GPU preseže prag"
 
@@ -1904,6 +2066,14 @@ msgstr "Sproži se, ko uporaba pomnilnika preseže prag"
 #: src/lib/alerts.ts
 msgid "Triggers when status switches between up and down"
 msgstr "Sproži se, ko se stanje preklaplja med gor in dol"
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS battery charge drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS load exceeds a threshold"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when usage of any disk exceeds a threshold"
@@ -1935,6 +2105,7 @@ msgid "Universal token"
 msgstr "Univerzalni žeton"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/storage-pools-table.tsx
 #: src/lib/i18n.ts
 msgid "Unknown"
@@ -1974,6 +2145,61 @@ msgstr "Posodobljeno vsakih 10 minut."
 msgid "Upload"
 msgstr "Naloži"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS alarm"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS charge and load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS communication"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS fault"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS on battery"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS power"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS runtime"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS type"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS unavailable or data stale"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS voltage"
+msgstr ""
+
 #: src/components/routes/system/info-bar.tsx
 #: src/components/systems-table/systems-table-columns.tsx
 msgid "Uptime"
@@ -2005,6 +2231,10 @@ msgstr "Uporabljeno"
 #: src/components/navbar.tsx
 msgid "Users"
 msgstr "Uporabniki"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Utility power"
+msgstr ""
 
 #: src/components/routes/system/charts/disk-charts.tsx
 msgctxt "Disk I/O utilization"

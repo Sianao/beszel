@@ -9,6 +9,7 @@ type UPSStats struct {
 	Online  bool               `json:"online" cbor:"3,keyasint"`
 	Updated int64              `json:"updated" cbor:"4,keyasint"`
 	Metrics map[string]float64 `json:"metrics,omitempty" cbor:"5,keyasint,omitempty"`
+	Details map[string]string  `json:"details,omitempty" cbor:"6,keyasint,omitempty"`
 	// Aggregate-only fields retain extrema, weights, and observed status flags.
 	Min    map[string]float64 `json:"min,omitempty" cbor:"-"`
 	Max    map[string]float64 `json:"max,omitempty" cbor:"-"`

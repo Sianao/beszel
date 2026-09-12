@@ -266,6 +266,27 @@ msgstr "Batt"
 msgid "Battery"
 msgstr "Batteria"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery high voltage reference"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery low voltage reference"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery voltage"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became active"
 msgstr "Diventato attivo"
@@ -273,6 +294,10 @@ msgstr "Diventato attivo"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became inactive"
 msgstr "Diventato inattivo"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Beeper status"
+msgstr ""
 
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Before"
@@ -305,6 +330,10 @@ msgstr "Bit (Kbps, Mbps, Gbps)"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Boot state"
 msgstr "Stato di avvio"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Bypass"
+msgstr ""
 
 #: src/components/routes/settings/general.tsx
 #: src/components/routes/settings/general.tsx
@@ -363,6 +392,7 @@ msgid "Charge"
 msgstr "Carica"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Charging"
 msgstr "In carica"
@@ -653,7 +683,12 @@ msgstr "Dettagli"
 msgid "Device"
 msgstr "Dispositivo"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Disabled"
+msgstr ""
+
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Discharging"
 msgstr "In scarica"
@@ -743,6 +778,10 @@ msgstr "Notifiche email"
 msgid "Empty"
 msgstr "Vuota"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Enabled"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "End Time"
@@ -784,6 +823,10 @@ msgstr "Effimero"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Error"
 msgstr "Errore"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Estimated runtime"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Example:"
@@ -893,6 +936,10 @@ msgstr ""
 #: src/components/alerts/alerts-sheet.tsx
 msgid "For <0>{min}</0> {min, plural, one {minute} other {minutes}}"
 msgstr "Per <0>{min}</0> {min, plural, one {minuto} other {minuti}}"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Forced shutdown"
+msgstr ""
 
 #: src/components/login/auth-form.tsx
 msgid "Forgot password?"
@@ -1011,9 +1058,18 @@ msgctxt "Docker image"
 msgid "Image"
 msgstr "Immagine"
 
+#: src/components/containers-table/containers-table-columns.tsx
+#: src/components/containers-table/containers-table-columns.tsx
+msgid "Image update available"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "Inactive"
 msgstr "Inattivo"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Input voltage"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Interval"
@@ -1026,6 +1082,10 @@ msgstr "Indirizzo email non valido."
 #: src/components/routes/settings/general.tsx
 msgid "Language"
 msgstr "Lingua"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Last successful reading"
+msgstr ""
 
 #: src/components/systems-table/systems-table.tsx
 msgid "Layout"
@@ -1043,6 +1103,10 @@ msgstr "Ciclo di vita"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "limit"
 msgstr "limite"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Line interactive UPS"
+msgstr ""
 
 #: src/components/routes/system/charts/load-average-chart.tsx
 msgid "Load Average"
@@ -1097,6 +1161,10 @@ msgstr "Log"
 msgid "Looking instead for where to create alerts? Click the bell <0/> icons in the systems table."
 msgstr "Cerchi invece dove creare avvisi? Clicca sulle icone della campana <0/> nella tabella dei sistemi."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Low battery"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Main PID"
 msgstr "PID principale"
@@ -1141,6 +1209,10 @@ msgstr "Utilizzo Memoria"
 msgid "Memory usage of containers"
 msgstr "Utilizzo della memoria dei container"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "min"
+msgstr ""
+
 #. Device model
 #: src/components/routes/system/smart-table.tsx
 msgid "Model"
@@ -1149,6 +1221,10 @@ msgstr "Modello"
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "Mountpoint"
 msgstr "Punto di montaggio"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Muted"
+msgstr ""
 
 #: src/components/add-system.tsx
 #: src/components/alerts-history-columns.tsx
@@ -1212,6 +1288,22 @@ msgstr "Nessun attributo S.M.A.R.T. disponibile per questo dispositivo."
 msgid "No systems found."
 msgstr "Nessun sistema trovato."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal battery voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output current"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output frequency"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output voltage"
+msgstr ""
+
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "None"
 msgstr "Nessuno"
@@ -1229,6 +1321,18 @@ msgstr "Le notifiche possono includere estratti recenti dai log dei container."
 #: src/components/login/auth-form.tsx
 msgid "OAuth 2 / OIDC support"
 msgstr "Supporto OAuth 2 / OIDC"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline / line interactive"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline UPS"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "On battery"
+msgstr ""
 
 #: src/components/routes/settings/config-yaml.tsx
 msgid "On each restart, systems in the database will be updated to match the systems defined in the file."
@@ -1251,6 +1355,10 @@ msgstr "Una volta"
 msgid "One-time password"
 msgstr "Password monouso"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Online UPS"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
@@ -1267,6 +1375,23 @@ msgstr "Oppure continua con"
 #: src/components/routes/system/cpu-sheet.tsx
 msgid "Other"
 msgstr "Altro"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output frequency"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output off"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Overload"
+msgstr ""
 
 #: src/components/alerts/alerts-sheet.tsx
 msgid "Overwrite existing alerts"
@@ -1400,6 +1525,10 @@ msgctxt "Container ports"
 msgid "Ports"
 msgstr "Porte"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Power"
+msgstr ""
+
 #. Power On Time
 #: src/components/routes/system/smart-table.tsx
 msgid "Power On"
@@ -1476,6 +1605,10 @@ msgstr "Aggiorna"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Relationships"
 msgstr "Relazioni"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Replace battery"
+msgstr ""
 
 #: src/components/login/login.tsx
 msgid "Request a one-time password"
@@ -1587,6 +1720,10 @@ msgstr "Vedi <0>impostazioni di notifica</0> per configurare come ricevere gli a
 msgid "Select {foo}"
 msgstr "Seleziona {foo}"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Select UPS"
+msgstr ""
+
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Send a single heartbeat ping to verify your endpoint is working."
 msgstr "Invia un singolo ping di heartbeat per verificare che l'endpoint funzioni."
@@ -1638,6 +1775,10 @@ msgstr "Impostazioni"
 msgid "Settings saved"
 msgstr "Impostazioni salvate"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Shutdown delay"
+msgstr ""
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "Accedi"
@@ -1655,6 +1796,10 @@ msgstr "Ordina per"
 msgid "Start Time"
 msgstr "Ora di inizio"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Startup delay"
+msgstr ""
+
 #. Context: alert state (active or resolved)
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/quiet-hours.tsx
@@ -1664,6 +1809,7 @@ msgid "State"
 msgstr "Stato"
 
 #: src/components/containers-table/containers-table-columns.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/smart-table.tsx
 #: src/components/systemd-table/systemd-table.tsx
 #: src/components/systems-table/systems-table.tsx
@@ -1850,6 +1996,10 @@ msgid "Triggers"
 msgstr "Trigger"
 
 #: src/lib/alerts.ts
+msgid "Triggers on UPS low battery, overload, replacement battery, or alarm status"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when 1 minute load average exceeds a threshold"
 msgstr "Si attiva quando la media di carico di 1 minuto supera una soglia"
 
@@ -1874,12 +2024,20 @@ msgid "Triggers when any systemd service enters the failed state"
 msgstr "Si attiva quando un servizio systemd entra in stato di errore"
 
 #: src/lib/alerts.ts
+msgid "Triggers when any UPS switches to battery power"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when battery charge drops below a threshold"
 msgstr "Attiva quando la carica della batteria scende sotto una soglia"
 
 #: src/lib/alerts.ts
 msgid "Triggers when combined up/down exceeds a threshold"
 msgstr "Attiva quando il combinato up/down supera una soglia"
+
+#: src/lib/alerts.ts
+msgid "Triggers when communication with any UPS is lost"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when CPU I/O wait exceeds a threshold"
@@ -1894,6 +2052,10 @@ msgid "Triggers when CPU usage exceeds a threshold"
 msgstr "Attiva quando l'utilizzo della CPU supera una soglia"
 
 #: src/lib/alerts.ts
+msgid "Triggers when estimated UPS runtime drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when GPU usage exceeds a threshold"
 msgstr "Si attiva quando l'utilizzo della GPU supera una soglia"
 
@@ -1904,6 +2066,14 @@ msgstr "Attiva quando l'utilizzo della memoria supera una soglia"
 #: src/lib/alerts.ts
 msgid "Triggers when status switches between up and down"
 msgstr "Attiva quando lo stato passa tra up e down"
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS battery charge drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS load exceeds a threshold"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when usage of any disk exceeds a threshold"
@@ -1935,6 +2105,7 @@ msgid "Universal token"
 msgstr "Token universale"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/storage-pools-table.tsx
 #: src/lib/i18n.ts
 msgid "Unknown"
@@ -1974,6 +2145,61 @@ msgstr "Aggiornato ogni 10 minuti."
 msgid "Upload"
 msgstr "Carica"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS alarm"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS charge and load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS communication"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS fault"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS on battery"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS power"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS runtime"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS type"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS unavailable or data stale"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS voltage"
+msgstr ""
+
 #: src/components/routes/system/info-bar.tsx
 #: src/components/systems-table/systems-table-columns.tsx
 msgid "Uptime"
@@ -2005,6 +2231,10 @@ msgstr "Utilizzato"
 #: src/components/navbar.tsx
 msgid "Users"
 msgstr "Utenti"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Utility power"
+msgstr ""
 
 #: src/components/routes/system/charts/disk-charts.tsx
 msgctxt "Disk I/O utilization"

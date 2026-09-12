@@ -21,6 +21,7 @@ func averageUPS(records []system.Stats) map[string]system.UPSStats {
 				value = system.UPSStats{Metrics: make(map[string]float64), Min: make(map[string]float64), Max: make(map[string]float64), Counts: make(map[string]uint64)}
 			}
 			value.Name, value.Model, value.Status = sample.Name, sample.Model, sample.Status
+			value.Details = sample.Details
 			value.Online, value.Updated = sample.Online, sample.Updated
 			flags := sample.States
 			if flags == nil {

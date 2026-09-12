@@ -266,6 +266,27 @@ msgstr "배터리"
 msgid "Battery"
 msgstr "배터리"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery high voltage reference"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery low voltage reference"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Battery voltage"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became active"
 msgstr "활성화됨"
@@ -273,6 +294,10 @@ msgstr "활성화됨"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Became inactive"
 msgstr "비활성화됨"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Beeper status"
+msgstr ""
 
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Before"
@@ -305,6 +330,10 @@ msgstr "비트 (Kbps, Mbps, Gbps)"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Boot state"
 msgstr "부팅 상태"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Bypass"
+msgstr ""
 
 #: src/components/routes/settings/general.tsx
 #: src/components/routes/settings/general.tsx
@@ -363,6 +392,7 @@ msgid "Charge"
 msgstr "충전"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Charging"
 msgstr "충전 중"
@@ -653,7 +683,12 @@ msgstr "세부사항"
 msgid "Device"
 msgstr "장치"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Disabled"
+msgstr ""
+
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/lib/i18n.ts
 msgid "Discharging"
 msgstr "방전 중"
@@ -743,6 +778,10 @@ msgstr "이메일 알림"
 msgid "Empty"
 msgstr "빔"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Enabled"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "End Time"
@@ -784,6 +823,10 @@ msgstr "일시적"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Error"
 msgstr "오류"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Estimated runtime"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Example:"
@@ -893,6 +936,10 @@ msgstr "펌웨어"
 #: src/components/alerts/alerts-sheet.tsx
 msgid "For <0>{min}</0> {min, plural, one {minute} other {minutes}}"
 msgstr "<0>{min}</0> {min, plural, one {분} other {분}} 동안"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Forced shutdown"
+msgstr ""
 
 #: src/components/login/auth-form.tsx
 msgid "Forgot password?"
@@ -1011,9 +1058,18 @@ msgctxt "Docker image"
 msgid "Image"
 msgstr "이미지"
 
+#: src/components/containers-table/containers-table-columns.tsx
+#: src/components/containers-table/containers-table-columns.tsx
+msgid "Image update available"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 msgid "Inactive"
 msgstr "비활성"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Input voltage"
+msgstr ""
 
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Interval"
@@ -1026,6 +1082,10 @@ msgstr "잘못된 이메일 주소입니다."
 #: src/components/routes/settings/general.tsx
 msgid "Language"
 msgstr "언어"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Last successful reading"
+msgstr ""
 
 #: src/components/systems-table/systems-table.tsx
 msgid "Layout"
@@ -1043,6 +1103,10 @@ msgstr "생명주기"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "limit"
 msgstr "제한"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Line interactive UPS"
+msgstr ""
 
 #: src/components/routes/system/charts/load-average-chart.tsx
 msgid "Load Average"
@@ -1097,6 +1161,10 @@ msgstr "로그"
 msgid "Looking instead for where to create alerts? Click the bell <0/> icons in the systems table."
 msgstr "알림을 생성하려 하시나요? 시스템 테이블의 종 <0/> 아이콘을 클릭하세요."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Low battery"
+msgstr ""
+
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Main PID"
 msgstr "주 PID"
@@ -1141,6 +1209,10 @@ msgstr "메모리 사용량"
 msgid "Memory usage of containers"
 msgstr "컨테이너 메모리 사용량"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "min"
+msgstr ""
+
 #. Device model
 #: src/components/routes/system/smart-table.tsx
 msgid "Model"
@@ -1149,6 +1221,10 @@ msgstr "모델"
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "Mountpoint"
 msgstr "마운트 지점"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Muted"
+msgstr ""
 
 #: src/components/add-system.tsx
 #: src/components/alerts-history-columns.tsx
@@ -1212,6 +1288,22 @@ msgstr "이 장치에 사용할 수 있는 S.M.A.R.T. 속성이 없습니다."
 msgid "No systems found."
 msgstr "시스템을 찾을 수 없습니다."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal battery voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output current"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output frequency"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Nominal output voltage"
+msgstr ""
+
 #: src/components/routes/system/storage-pools-table.tsx
 msgid "None"
 msgstr "없음"
@@ -1229,6 +1321,18 @@ msgstr "알림에는 최근 컨테이너 로그의 일부가 포함될 수 있�
 #: src/components/login/auth-form.tsx
 msgid "OAuth 2 / OIDC support"
 msgstr "OAuth 2 / OIDC 지원"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline / line interactive"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Offline UPS"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "On battery"
+msgstr ""
 
 #: src/components/routes/settings/config-yaml.tsx
 msgid "On each restart, systems in the database will be updated to match the systems defined in the file."
@@ -1251,6 +1355,10 @@ msgstr "일회성"
 msgid "One-time password"
 msgstr "OTP"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Online UPS"
+msgstr ""
+
 #: src/components/routes/settings/quiet-hours.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
 #: src/components/routes/settings/tokens-fingerprints.tsx
@@ -1267,6 +1375,23 @@ msgstr "또는 아래 항목으로 진행하기"
 #: src/components/routes/system/cpu-sheet.tsx
 msgid "Other"
 msgstr "기타"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output frequency"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output off"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Output voltage"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Overload"
+msgstr ""
 
 #: src/components/alerts/alerts-sheet.tsx
 msgid "Overwrite existing alerts"
@@ -1400,6 +1525,10 @@ msgctxt "Container ports"
 msgid "Ports"
 msgstr "포트"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Power"
+msgstr ""
+
 #. Power On Time
 #: src/components/routes/system/smart-table.tsx
 msgid "Power On"
@@ -1476,6 +1605,10 @@ msgstr "새로고침"
 #: src/components/systemd-table/systemd-table.tsx
 msgid "Relationships"
 msgstr "관계"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Replace battery"
+msgstr ""
 
 #: src/components/login/login.tsx
 msgid "Request a one-time password"
@@ -1587,6 +1720,10 @@ msgstr "알림을 받는 방법을 구성하려면 <0>알림 설정</0>을 참�
 msgid "Select {foo}"
 msgstr "{foo} 선택"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Select UPS"
+msgstr ""
+
 #: src/components/routes/settings/heartbeat.tsx
 msgid "Send a single heartbeat ping to verify your endpoint is working."
 msgstr "엔드포인트가 작동하는지 확인하기 위해 단일 하트비트 핑을 보냅니다."
@@ -1638,6 +1775,10 @@ msgstr "설정"
 msgid "Settings saved"
 msgstr "설정이 저장되었습니다."
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Shutdown delay"
+msgstr ""
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "로그인"
@@ -1655,6 +1796,10 @@ msgstr "정렬 기준"
 msgid "Start Time"
 msgstr "시작 시간"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Startup delay"
+msgstr ""
+
 #. Context: alert state (active or resolved)
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/quiet-hours.tsx
@@ -1664,6 +1809,7 @@ msgid "State"
 msgstr "상태"
 
 #: src/components/containers-table/containers-table-columns.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/smart-table.tsx
 #: src/components/systemd-table/systemd-table.tsx
 #: src/components/systems-table/systems-table.tsx
@@ -1850,6 +1996,10 @@ msgid "Triggers"
 msgstr "트리거"
 
 #: src/lib/alerts.ts
+msgid "Triggers on UPS low battery, overload, replacement battery, or alarm status"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when 1 minute load average exceeds a threshold"
 msgstr "1분 부하 평균이 임계값을 초과하면 트리거됩니다."
 
@@ -1874,12 +2024,20 @@ msgid "Triggers when any systemd service enters the failed state"
 msgstr "어떤 systemd 서비스든 실패 상태로 전환되면 트리거됩니다"
 
 #: src/lib/alerts.ts
+msgid "Triggers when any UPS switches to battery power"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when battery charge drops below a threshold"
 msgstr "배터리 충전량이 임계값 아래로 떨어질 때 트리거됩니다."
 
 #: src/lib/alerts.ts
 msgid "Triggers when combined up/down exceeds a threshold"
 msgstr "업로드와 다운로드 대역폭의 합이 임계값을 초과할 때 트리거됩니다."
+
+#: src/lib/alerts.ts
+msgid "Triggers when communication with any UPS is lost"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when CPU I/O wait exceeds a threshold"
@@ -1894,6 +2052,10 @@ msgid "Triggers when CPU usage exceeds a threshold"
 msgstr "CPU 사용량이 임계값을 초과할 때 트리거됩니다."
 
 #: src/lib/alerts.ts
+msgid "Triggers when estimated UPS runtime drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
 msgid "Triggers when GPU usage exceeds a threshold"
 msgstr "GPU 사용량이 임계값을 초과할 때 트리거됩니다."
 
@@ -1904,6 +2066,14 @@ msgstr "메모리 사용량이 임계값을 초과할 때 트리거됩니다."
 #: src/lib/alerts.ts
 msgid "Triggers when status switches between up and down"
 msgstr "시스템의 전원이 켜지거나 꺼질때 트리거됩니다."
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS battery charge drops below a threshold"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "Triggers when UPS load exceeds a threshold"
+msgstr ""
 
 #: src/lib/alerts.ts
 msgid "Triggers when usage of any disk exceeds a threshold"
@@ -1935,6 +2105,7 @@ msgid "Universal token"
 msgstr "범용 토큰"
 
 #. Context: Battery state
+#: src/components/routes/system/charts/ups-charts.tsx
 #: src/components/routes/system/storage-pools-table.tsx
 #: src/lib/i18n.ts
 msgid "Unknown"
@@ -1974,6 +2145,61 @@ msgstr "10분마다 업데이트됩니다."
 msgid "Upload"
 msgstr "업로드"
 
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS alarm"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS battery charge"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS charge and load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS communication"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS fault"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS load"
+msgstr ""
+
+#: src/lib/alerts.ts
+msgid "UPS on battery"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS power"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/lib/alerts.ts
+msgid "UPS runtime"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS temperature"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS type"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS unavailable or data stale"
+msgstr ""
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "UPS voltage"
+msgstr ""
+
 #: src/components/routes/system/info-bar.tsx
 #: src/components/systems-table/systems-table-columns.tsx
 msgid "Uptime"
@@ -2005,6 +2231,10 @@ msgstr "사용됨"
 #: src/components/navbar.tsx
 msgid "Users"
 msgstr "사용자"
+
+#: src/components/routes/system/charts/ups-charts.tsx
+msgid "Utility power"
+msgstr ""
 
 #: src/components/routes/system/charts/disk-charts.tsx
 msgctxt "Disk I/O utilization"

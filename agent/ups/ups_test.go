@@ -176,3 +176,27 @@ func TestCancellation(t *testing.T) {
 		t.Fatal("poller did not stop on cancellation")
 	}
 }
+
+func TestReportedUPSFields(t *testing.T) {
+	s := makeStats("ups", map[string]string{
+		"ups.status": "OL", "battery.charge": "100", "ups.load": "7",
+		"input.voltage": "214.0", "output.voltage": "214.0", "battery.voltage": "13.6",
+		"output.frequency": "50.0", "output.current.nominal": "2.0",
+		"ups.type": "offline / line interactive", "ups.beeper.status": "enabled",
+		"driver.parameter.port": "auto",
+	})
+	if s.Status != "OL" || s.Metrics["output.frequency"] != 50 || s.Metrics["battery.voltage"] != 13.6 {
+		t.Fatalf("missing reported readings: %#v", s)
+	}
+	for _, key := range []string{"battery.runtime", "ups.realpower", "output.current.nominal"} {
+		if _, ok := s.Metrics[key]; ok {
+			t.Fatalf("unexpected live metric: %s", key)
+		}
+	}
+	if s.Details["output.current.nominal"] != "2.0" || s.Details["ups.beeper.status"] != "enabled" {
+		t.Fatalf("missing details: %#v", s.Details)
+	}
+	if _, ok := s.Details["driver.parameter.port"]; ok {
+		t.Fatal("driver configuration exposed")
+	}
+}

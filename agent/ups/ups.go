@@ -224,10 +224,16 @@ func tokens(line string) ([]string, error) {
 	return result, nil
 }
 
-var metricKeys = []string{"battery.charge", "battery.runtime", "ups.load", "ups.realpower", "input.voltage", "output.voltage", "battery.voltage", "ups.temperature", "battery.temperature"}
+var metricKeys = []string{"battery.charge", "battery.runtime", "ups.load", "ups.realpower", "input.voltage", "output.voltage", "battery.voltage", "ups.temperature", "battery.temperature", "output.frequency"}
 
 func makeStats(name string, vars map[string]string) system.UPSStats {
 	s := system.UPSStats{Name: name, Model: vars["ups.model"], Status: vars["ups.status"], Online: true, Updated: time.Now().Unix(), Metrics: make(map[string]float64)}
+	s.Details = make(map[string]string)
+	for _, key := range []string{"ups.type", "ups.beeper.status", "battery.voltage.nominal", "battery.voltage.high", "battery.voltage.low", "output.voltage.nominal", "output.current.nominal", "output.frequency.nominal", "ups.delay.shutdown", "ups.delay.start"} {
+		if value := vars[key]; value != "" {
+			s.Details[key] = value
+		}
+	}
 	for _, key := range metricKeys {
 		value, err := strconv.ParseFloat(vars[key], 64)
 		if err != nil || math.IsNaN(value) || math.IsInf(value, 0) {

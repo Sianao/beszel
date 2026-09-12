@@ -65,6 +65,7 @@ or notifications. Short outages between hub samples may not appear in history.
 | `ups.realpower` | W |
 | `input.voltage`, `output.voltage`, `battery.voltage` | V |
 | `ups.temperature`, `battery.temperature` | °C |
+| `output.frequency` | Hz |
 
 Only available measurements are shown. Zero is a valid reading; missing,
 negative non-temperature readings and non-finite values are omitted. Real power
@@ -100,3 +101,13 @@ Low charge/runtime rules also apply while utility power is present. Per-device
 alert routing and sub-minute outage event capture are not part of this version.
 
 Protocol reference: [NUT network protocol](https://networkupstools.org/docs/developer-guide.chunked/net-protocol.html).
+
+The live card shows reported measurements only. Voltage history separates the
+battery from input/output voltage, and output frequency has its own chart.
+Charts appear as soon as a live metric is available and wait for historical
+records instead of synthesizing history from the current reading.
+
+Device details include UPS type, beeper status, nominal voltage/current/frequency,
+battery voltage references, and startup/shutdown delays when reported. These
+are displayed separately from live measurements and are not plotted. Both hub
+and agent must be updated to collect output frequency and these details.

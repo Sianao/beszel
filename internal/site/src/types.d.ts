@@ -166,6 +166,7 @@ export interface SystemStats {
 }
 
 export interface UPSStats {
+	details?: Record<string, string>
 	name: string
 	model?: string
 	status?: string
